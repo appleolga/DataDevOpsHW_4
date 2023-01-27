@@ -1,4 +1,4 @@
-FROM --platform=linux/x86_64 python:3.7-slim
+FROM --platform=linux/x86_64 python:3.7-slim AS build
 
 WORKDIR /app
 RUN groupadd -r webservice && useradd --no-log-init -r -g webservice webservice

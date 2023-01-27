@@ -30,7 +30,7 @@ Blue/green deployment to release a single service
 
 
         --Check deployment--
-        $ while sleep 2; do curl $(kubectl get ing -o jsonpath={.items..status.loadBalancer.ingress[0].ip}) ; done
+        $ while sleep 2; do curl $(kubectl get ing -n $(kubens | grep python) -o jsonpath={.items..status.loadBalancer.ingress[0].ip}) ; done
     
 
 3. version 1 is shutdown

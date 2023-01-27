@@ -29,11 +29,12 @@ Blue/green deployment to release a single service
     
 
 
-        --Check deployemnt--
+        --Check deployment--
         $ while sleep 2; do curl $(kubectl get ing -o jsonpath={.items..status.loadBalancer.ingress[0].ip}) ; done
     
 
 3. version 1 is shutdown
+
 
 
     $ kubectl delete deploy hello-gitops-v1

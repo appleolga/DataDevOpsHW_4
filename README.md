@@ -37,7 +37,7 @@ Blue/green deployment to release a single service
 
 
 
-    $ kubectl delete deploy hello-gitops-v1
+        $ kubectl delete deploy hello-gitops-v1
 
 
 
